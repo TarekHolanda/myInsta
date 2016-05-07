@@ -1,16 +1,20 @@
 <ion-view title="My Instagram">
     <ion-content>
-        <div class="card posts" ng-repeat="tag in tags">
-            <div class="item item-divider">
-                <img src="{{tag.user.profile_picture}}" class="col col-25 postImg"/>
-                <div class="col col-50">
-                    <i class="icon ion-social-instagram"></i>
-                    {{tag.user.full_name}}
-                    <br>
-                    {{tag.caption.text}}
-                </div>
+        <label class="item item-input card">
+            <span class="input-label">Search Tag:</span>
+            <input type="text" placeholder="Type..." ng-model="newTag" ng-change="setTag(newTag)">
+        </label>
+        <div class="list card" ng-repeat="tag in tags">
+            <div class="item item-avatar" style="background-color: #F5F5F5;">
+                <img src="{{tag.user.profile_picture}}"/>
+                <i class="icon ion-social-instagram"></i>
+                <span>{{tag.user.full_name}}</span>
+                <br>
+                <span>{{tag.caption.text}}</span>
             </div>
-            <img src="{{tag.images.standard_resolution.url}}" class="col col-100"/>
+            <div class="item item-body">
+                <img src="{{tag.images.standard_resolution.url}}" class="col col-100"/>
+            </div>
         </div>
     </ion-content>
 </ion-view>
