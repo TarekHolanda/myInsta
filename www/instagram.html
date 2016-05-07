@@ -1,0 +1,16 @@
+<ion-view title="My Instagram">
+    <ion-content>
+        <div class="card posts" ng-repeat="tag in tags">
+            <div class="item item-divider">
+                <img src="{{tag.user.profile_picture}}" class="col col-25 postImg"/>
+                <div class="col col-50">
+                    <i class="icon ion-social-instagram"></i>
+                    {{tag.user.full_name}}
+                    <br>
+                    {{tag.caption.text}}
+                </div>
+            </div>
+            <img src="{{tag.images.standard_resolution.url}}" class="col col-100"/>
+        </div>
+    </ion-content>
+</ion-view>

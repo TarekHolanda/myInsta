@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+.home-logo{
+	width: 250px;
+	margin: auto;
+}
+.posts {
+	color: black;
+	font-size: large;
+	font-weight: 500;
+}
+.postImg {
+	float: right;
+}
